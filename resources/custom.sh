@@ -4,7 +4,7 @@ set -exu
 
 # Add your additional provisioning here for custom VM images.
 
-sudo pkg install -y git curl zip unzip cmake ninja pkgconf bash python311 nasm gmake postgres16-client llvm16
+sudo pkg install -y git curl zip unzip cmake ninja pkgconf bash python311 nasm gmake postgresql16-client llvm16
 
 sudo rm -rf /usr/bin/make
 sudo ln -s /usr/local/bin/gmake /usr/bin/make
