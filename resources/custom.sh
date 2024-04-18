@@ -14,4 +14,3 @@ sudo ln -s /usr/local/bin/python3.11 /usr/local/bin/python3
 python3 --version
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-export PATH="$HOME/.cargo/bin:$PATH"
