@@ -2,8 +2,8 @@ name: Build VM Disk Image
 
 on:
   push:
-    branches: '*'
-    tags: 'v*'
+    branches: "*"
+    tags: "v*"
   pull_request:
     branches:
       - master
@@ -14,14 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:edge
     strategy:
-        fail-fast: false
-        matrix:
-          version:
-            - '14.0'
+      fail-fast: false
+      matrix:
+        version:
+          - "14.0"
+          - "13.2"
 
-          architecture:
-            - name: x86-64
-              qemu: x86_64
+        architecture:
+          - name: x86-64
+            qemu: x86_64
 
     steps:
       - name: Clone Repository
@@ -46,7 +47,7 @@ jobs:
       #     limit-access-to-actor: true
 
       - name: Build Image
-        if: '!matrix.copy_from_previous_release'
+        if: "!matrix.copy_from_previous_release"
         env:
           PACKER_LOG: 1
         run: |
