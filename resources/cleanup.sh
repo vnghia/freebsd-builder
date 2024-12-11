@@ -19,5 +19,3 @@ minimize_swap() {
 }
 
 cleanup
-minimize_disk
-minimize_swap
